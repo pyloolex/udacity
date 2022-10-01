@@ -24,6 +24,9 @@ class MainActivity : AppCompatActivity()
             this.findViewById(R.id.box_four_text),
             this.findViewById(R.id.box_five_text),
             this.findViewById(R.id.constraint_layout),
+            this.findViewById(R.id.red_button),
+            this.findViewById(R.id.yellow_button),
+            this.findViewById(R.id.green_button),
         )
 
         for (item in clickableViews)
@@ -44,6 +47,16 @@ class MainActivity : AppCompatActivity()
                 android.R.color.holo_green_dark)
             R.id.box_five_text -> view.setBackgroundResource(
                 android.R.color.holo_green_light)
+
+            R.id.red_button -> (this.findViewById(
+                R.id.box_three_text) as View).setBackgroundResource(
+                    R.color.my_red)
+            R.id.yellow_button -> (this.findViewById(
+                R.id.box_four_text) as View).setBackgroundResource(
+                    R.color.my_yellow)
+            R.id.green_button -> (this.findViewById(
+                R.id.box_five_text) as View).setBackgroundResource(
+                    R.color.my_green)
 
             else ->view.setBackgroundColor(Color.LTGRAY)
         }
